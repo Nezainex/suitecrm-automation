@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [SuiteCRM BDD Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    <listener class-name="utils.listeners.TestSuiteListener"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="Cucumber_Chrome(failed)" verbose="0">
+    <classes>
+      <class name="runners.ChromeRunnerTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownChrome"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="setUpChrome"/>
+        </methods>
+      </class> <!-- runners.ChromeRunnerTest -->
+    </classes>
+  </test> <!-- Cucumber_Chrome(failed) -->
+  <test thread-count="2" parallel="classes" name="Cucumber_Firefox(failed)" verbose="0">
+    <classes>
+      <class name="runners.FirefoxRunnerTest">
+        <methods>
+          <include name="setUpFirefox"/>
+          <include name="tearDownFirefox"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- runners.FirefoxRunnerTest -->
+    </classes>
+  </test> <!-- Cucumber_Firefox(failed) -->
+</suite> <!-- Failed suite [SuiteCRM BDD Suite] -->

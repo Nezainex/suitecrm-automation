@@ -1,0 +1,56 @@
+# Gradle build output
+.gradle/
+build/
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Maven target (исключая для Allure)
+# Оставляем target/, чтобы Allure мог использовать его для отчетов.
+!target/
+!target/allure-results/
+!target/allure-report/
+
+# IDE-specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache
+.vscode/
+
+# Test and report output
+test-output/
+selenium-logs/
+selenide-screenshots/
+selenide-reports/
+
+# Logs and temp files
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+*.tmp
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency folders
+node_modules/
+
+# Custom generated artifacts (e.g., test resources)
+custom-resources/
+
+# IntelliJ-specific output
+out/
+
+# MacOS-specific files
+__MACOSX/

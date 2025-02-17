@@ -1,0 +1,16 @@
+service\ConfProperties.class
+utils\TestListener.class
+service\LoggingConfProperties.class
+pages\LoginPage.class
+CustomAnnotations\RetryCountIfFailed.class
+utils\RetryAnalyzer.class
+pages\HomePage.class
+utils\ProjectConstants.class
+utils\TestUtils.class
+base\BasePage.class
+utils\ReportUtils.class
+utils\DateTimeUtils.class
+utils\AnnotationTransformer.class
+utils\ConsoleColors.class
+base\BaseUtils.class
+utils\TestSuiteListener.class

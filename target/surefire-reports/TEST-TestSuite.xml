@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="22.386" tests="4" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\Username\.cache\selenium\chromedriver\win64\131.0.6778.264\chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\Username\IdeaProjects\suitecrm-automation\target\test-classes;C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes;C:\Users\Username\.m2\repository\com\codeborne\selenide\7.7.0\selenide-7.7.0.jar;C:\Users\Username\.m2\repository\com\codeborne\selenide-core\7.7.0\selenide-core-7.7.0.jar;C:\Users\Username\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Username\.m2\repository\com\github\valfirst\browserup-proxy\browserup-proxy-core\3.0.0\browserup-proxy-core-3.0.0.jar;C:\Users\Username\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Username\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\Username\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\Username\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Username\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Username\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\Username\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\Username\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-java\4.27.0\selenium-java-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-api\4.27.0\selenium-api-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.27.0\selenium-chrome-driver-4.27.0.jar;C:\Users\Username\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.27.0\selenium-chromium-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-json\4.27.0\selenium-json-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.27.0\selenium-manager-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v129\4.27.0\selenium-devtools-v129-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v130\4.27.0\selenium-devtools-v130-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.27.0\selenium-devtools-v131-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.27.0\selenium-devtools-v85-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.27.0\selenium-edge-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.27.0\selenium-firefox-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-http\4.27.0\selenium-http-4.27.0.jar;C:\Users\Username\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.27.0\selenium-ie-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.27.0\selenium-remote-driver-4.27.0.jar;C:\Users\Username\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-api\1.44.1\opentelemetry-api-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-context\1.44.1\opentelemetry-context-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.44.1\opentelemetry-exporter-logging-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.44.1\opentelemetry-sdk-common-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.44.1\opentelemetry-sdk-extension-autoconfigure-spi-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.44.1\opentelemetry-sdk-extension-autoconfigure-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.44.1-alpha\opentelemetry-api-incubator-1.44.1-alpha.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.44.1\opentelemetry-sdk-trace-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.44.1\opentelemetry-sdk-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.44.1\opentelemetry-sdk-metrics-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.44.1\opentelemetry-sdk-logs-1.44.1.jar;C:\Users\Username\.m2\repository\net\bytebuddy\byte-buddy\1.15.10\byte-buddy-1.15.10.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-os\4.27.0\selenium-os-4.27.0.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.27.0\selenium-safari-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-support\4.27.0\selenium-support-4.27.0.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-selenide\2.29.1\allure-selenide-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\Username\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\Username\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Username\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-testng\7.20.1\cucumber-testng-7.20.1.jar;C:\Users\Username\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-core\7.20.1\cucumber-core-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-gherkin\7.20.1\cucumber-gherkin-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.20.1\cucumber-gherkin-messages-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\Username\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\testng-xml-formatter\0.2.0\testng-xml-formatter-0.2.0.jar;C:\Users\Username\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\Username\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\datatable\7.20.1\datatable-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-plugin\7.20.1\cucumber-plugin-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\docstring\7.20.1\docstring-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\html-formatter\21.7.0\html-formatter-21.7.0.jar;C:\Users\Username\.m2\repository\io\cucumber\junit-xml-formatter\0.5.0\junit-xml-formatter-0.5.0.jar;C:\Users\Username\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-java\7.20.1\cucumber-java-7.20.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\Username\.m2\repository\org\json\json\20250107\json-20250107.jar;C:\Users\Username\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\Username\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Username\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Username\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Username\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\Username\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Username\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Username\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Username\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Username\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Username\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Username\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\Username\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.3\log4j-slf4j2-impl-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.24.3\log4j-slf4j-impl-2.24.3.jar;C:\Users\Username\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Username\.m2\repository\com\epam\healenium\tree-comparing\0.4.14\tree-comparing-0.4.14.jar;C:\Users\Username\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\Username\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar;C:\Users\Username\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;C:\Users\Username\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.5\bin"/>
+    <property name="sun.java.command" value="C:\Users\Username\AppData\Local\Temp\surefire2994115165649734837\surefirebooter-20250118201114668_3.jar C:\Users\Username\AppData\Local\Temp\surefire2994115165649734837 2025-01-18T20-11-14_494-jvmRun1 surefire-20250118201114668_1tmp surefire_0-20250118201114668_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Username\IdeaProjects\suitecrm-automation\target\test-classes;C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes;C:\Users\Username\.m2\repository\com\codeborne\selenide\7.7.0\selenide-7.7.0.jar;C:\Users\Username\.m2\repository\com\codeborne\selenide-core\7.7.0\selenide-core-7.7.0.jar;C:\Users\Username\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Username\.m2\repository\com\github\valfirst\browserup-proxy\browserup-proxy-core\3.0.0\browserup-proxy-core-3.0.0.jar;C:\Users\Username\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Username\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\Username\.m2\repository\com\google\guava\guava\33.4.0-jre\guava-33.4.0-jre.jar;C:\Users\Username\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Username\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Username\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\Username\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\Username\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-java\4.27.0\selenium-java-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-api\4.27.0\selenium-api-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.27.0\selenium-chrome-driver-4.27.0.jar;C:\Users\Username\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.27.0\selenium-chromium-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-json\4.27.0\selenium-json-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.27.0\selenium-manager-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v129\4.27.0\selenium-devtools-v129-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v130\4.27.0\selenium-devtools-v130-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v131\4.27.0\selenium-devtools-v131-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.27.0\selenium-devtools-v85-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.27.0\selenium-edge-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.27.0\selenium-firefox-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-http\4.27.0\selenium-http-4.27.0.jar;C:\Users\Username\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.27.0\selenium-ie-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.27.0\selenium-remote-driver-4.27.0.jar;C:\Users\Username\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-api\1.44.1\opentelemetry-api-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-context\1.44.1\opentelemetry-context-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.44.1\opentelemetry-exporter-logging-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.44.1\opentelemetry-sdk-common-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.44.1\opentelemetry-sdk-extension-autoconfigure-spi-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.44.1\opentelemetry-sdk-extension-autoconfigure-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.44.1-alpha\opentelemetry-api-incubator-1.44.1-alpha.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.44.1\opentelemetry-sdk-trace-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.44.1\opentelemetry-sdk-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.44.1\opentelemetry-sdk-metrics-1.44.1.jar;C:\Users\Username\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.44.1\opentelemetry-sdk-logs-1.44.1.jar;C:\Users\Username\.m2\repository\net\bytebuddy\byte-buddy\1.15.10\byte-buddy-1.15.10.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-os\4.27.0\selenium-os-4.27.0.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.27.0\selenium-safari-driver-4.27.0.jar;C:\Users\Username\.m2\repository\org\seleniumhq\selenium\selenium-support\4.27.0\selenium-support-4.27.0.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-selenide\2.29.1\allure-selenide-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\Username\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\Username\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Username\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-testng\7.20.1\cucumber-testng-7.20.1.jar;C:\Users\Username\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-core\7.20.1\cucumber-core-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-gherkin\7.20.1\cucumber-gherkin-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.20.1\cucumber-gherkin-messages-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\Username\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\testng-xml-formatter\0.2.0\testng-xml-formatter-0.2.0.jar;C:\Users\Username\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\Username\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\Username\.m2\repository\io\cucumber\datatable\7.20.1\datatable-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-plugin\7.20.1\cucumber-plugin-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\docstring\7.20.1\docstring-7.20.1.jar;C:\Users\Username\.m2\repository\io\cucumber\html-formatter\21.7.0\html-formatter-21.7.0.jar;C:\Users\Username\.m2\repository\io\cucumber\junit-xml-formatter\0.5.0\junit-xml-formatter-0.5.0.jar;C:\Users\Username\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Username\.m2\repository\io\cucumber\cucumber-java\7.20.1\cucumber-java-7.20.1.jar;C:\Users\Username\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\Username\.m2\repository\org\json\json\20250107\json-20250107.jar;C:\Users\Username\.m2\repository\io\github\bonigarcia\webdrivermanager\5.9.2\webdrivermanager-5.9.2.jar;C:\Users\Username\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java\3.4.0\docker-java-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-core\3.4.0\docker-java-core-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Username\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Username\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.4.0\docker-java-transport-httpclient5-3.4.0.jar;C:\Users\Username\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Username\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Username\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-compress\1.26.2\commons-compress-1.26.2.jar;C:\Users\Username\.m2\repository\commons-codec\commons-codec\1.17.0\commons-codec-1.17.0.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Username\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Username\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Username\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Username\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Username\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\Username\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\Username\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\Username\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.24.3\log4j-slf4j2-impl-2.24.3.jar;C:\Users\Username\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.24.3\log4j-slf4j-impl-2.24.3.jar;C:\Users\Username\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Username\.m2\repository\com\epam\healenium\tree-comparing\0.4.14\tree-comparing-0.4.14.jar;C:\Users\Username\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\Username\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\Username\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar;C:\Users\Username\.m2\repository\org\projectlombok\lombok\1.18.36\lombok-1.18.36.jar;C:\Users\Username\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Username"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21.0.5"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Username\IdeaProjects\suitecrm-automation"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Username\AppData\Local\Temp\surefire2994115165649734837\surefirebooter-20250118201114668_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
+    <property name="user.name" value="Username"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Username\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Username\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.5"/>
+    <property name="user.dir" value="C:\Users\Username\IdeaProjects\suitecrm-automation"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="webdriver.gecko.driver" value="C:\Users\Username\.cache\selenium\geckodriver\win64\0.35.0\geckodriver.exe"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21.0.5\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Users\Username\AppData\Local\Programs\Python\Python36-32;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Java\jdk-21.0.4\bin;C:\Program Files\Git\cmd;C:\Users\Username\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Username\AppData\Local\Programs\Python\Python312\;F:\Programming\Python\Scripts\;C:\gradle\gradle-8.10.1\bin;C:\Users\Username\scoop\apps\allure\2.29.0\bin;C:\Program Files\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Username\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Username\AppData\Local\Programs\Python\Python312\;F:\Programming\Python\Scripts\;F:\Programming\Python\;C:\Users\Username\AppData\Local\Microsoft\WindowsApps;C:\Users\Username\AppData\Local\GitHubDesktop\bin;C:\Users\Username\AppData\Local\Programs\Python\Python36-32\Scripts;;D:\Programming\Visual studio CODE\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.5+9-LTS-239"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;Checking main blocks on Home page&quot;, &quot;SuiteCRM Home Page&quot;](1)" classname="runners.ChromeRunnerTest" time="13.382">
+    <failure message="Element not found {By.xpath: //iframe[contains(@src, &apos;legacy/index.php?module=Home&apos;)]}&#10;Expected: visible&#10;Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.png&#10;Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.html&#10;Timeout: 10 s.&#10;Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//iframe[contains(@src, &apos;legacy/index.php?module=Home&apos;)]&quot;}" type="Element not found {By.xpath"><![CDATA[Element not found {By.xpath: //iframe[contains(@src, 'legacy/index.php?module=Home')]}
+Expected: visible
+Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.png
+Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:117)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:119)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:102)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8dcc49862dd298d86868c04366d452c8, findElement {using=xpath, value=//iframe[contains(@src, 'legacy/index.php?module=Home')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Username\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60846}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60846/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8dcc49862dd298d86868c04366d452c8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:64)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:39)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:30)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:101)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:91)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:62)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></failure>
+    <system-out><![CDATA[2025-01-18T17:11:15.703525500Z main DEBUG Apache Log4j Core 2.24 initializing configuration XmlConfiguration[location=C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml, lastModified=2025-01-05T12:25:19.128Z]
+2025-01-18T17:11:15.706247500Z main DEBUG PluginManager 'Core' found 131 plugins
+2025-01-18T17:11:15.706776700Z main DEBUG PluginManager 'Level' found 0 plugins
+2025-01-18T17:11:15.712621700Z main DEBUG PluginManager 'Lookup' found 16 plugins
+2025-01-18T17:11:15.715823600Z main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2025-01-18T17:11:15.733190700Z main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2025-01-18T17:11:15.758251400Z main DEBUG PatternLayout$Builder(pattern="%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=bright black}", PatternSelector=null, Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Replace=null, charset="UTF-8", alwaysWriteExceptions="null", disableAnsi="false", noConsoleNoAnsi="null", header="null", footer="null")
+2025-01-18T17:11:15.758251400Z main DEBUG PluginManager 'Converter' found 45 plugins
+2025-01-18T17:11:15.766424Z main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2025-01-18T17:11:15.780225700Z main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=bright black}), name="LogToConsole", Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Filter=null, ={})
+2025-01-18T17:11:15.784082100Z main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2025-01-18T17:11:15.784082100Z main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2025-01-18T17:11:15.785144Z main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2025-01-18T17:11:15.791704500Z main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2025-01-18T17:11:15.797227300Z main DEBUG FileAppender$Builder(fileName="C:/Users/Username/IdeaProjects/suitecrm-automation/logs/logger4j.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Filter=null, ={})
+2025-01-18T17:11:15.802224100Z main DEBUG Starting FileManager C:/Users/Username/IdeaProjects/suitecrm-automation/logs/logger4j.log
+2025-01-18T17:11:15.802224100Z main DEBUG Building Plugin[name=Appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2025-01-18T17:11:15.804224200Z main DEBUG createAppenders(={LogToConsole, LogToFile})
+2025-01-18T17:11:15.805224400Z main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2025-01-18T17:11:15.810226200Z main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2025-01-18T17:11:15.811223400Z main DEBUG Building Plugin[name=Logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2025-01-18T17:11:15.817223700Z main DEBUG LoggerConfig$Builder(additivity="false", level="DEBUG", levelAndRefs="null", name="src.test.java", includeLocation="null", ={LogToConsole}, ={}, Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Filter=null)
+2025-01-18T17:11:15.819224300Z main DEBUG Building Plugin[name=Logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2025-01-18T17:11:15.820224900Z main DEBUG LoggerConfig$Builder(additivity="false", level="OFF", levelAndRefs="null", name="io.qameta.allure.AllureLifecycle", includeLocation="null", ={}, ={}, Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Filter=null)
+2025-01-18T17:11:15.820224900Z main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2025-01-18T17:11:15.820224900Z main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2025-01-18T17:11:15.821223200Z main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2025-01-18T17:11:15.821223200Z main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2025-01-18T17:11:15.821223200Z main DEBUG Building Plugin[name=Root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2025-01-18T17:11:15.823838900Z main DEBUG LoggerConfig$RootLogger$Builder(additivity="null", level="INFO", levelAndRefs="null", includeLocation="null", ={LogToConsole, LogToFile}, ={}, Configuration(C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml), Filter=null)
+2025-01-18T17:11:15.823838900Z main DEBUG Building Plugin[name=Loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2025-01-18T17:11:15.824837800Z main DEBUG createLoggers(={src.test.java, io.qameta.allure.AllureLifecycle, root})
+2025-01-18T17:11:15.826838Z main DEBUG Configuration XmlConfiguration[location=C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml, lastModified=2025-01-05T12:25:19.128Z] initialized
+2025-01-18T17:11:15.826838Z main INFO Starting configuration XmlConfiguration[location=C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml, lastModified=2025-01-05T12:25:19.128Z]...
+2025-01-18T17:11:15.826838Z main INFO Start watching for changes to C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml every 0 seconds
+2025-01-18T17:11:15.827837600Z main INFO Configuration XmlConfiguration[location=C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml, lastModified=2025-01-05T12:25:19.128Z] started.
+2025-01-18T17:11:15.829837800Z main INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@7fa98a66...
+2025-01-18T17:11:15.829837800Z main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2025-01-18T17:11:15.830838500Z main DEBUG OutputStream closed
+2025-01-18T17:11:15.830838500Z main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2025-01-18T17:11:15.830838500Z main DEBUG Appender DefaultConsole-1 stopped with status true
+2025-01-18T17:11:15.830838500Z main INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@7fa98a66 stopped.
+2025-01-18T17:11:15.832838Z main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2025-01-18T17:11:15.833838200Z main DEBUG Reconfiguration complete for context[name=33909752] at URI C:\Users\Username\IdeaProjects\suitecrm-automation\target\classes\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@1807e3f6) with optional ClassLoader: null
+2025-01-18T17:11:15.833838200Z main DEBUG Shutdown hook enabled. Registering a new one.
+2025-01-18T17:11:15.834838300Z main DEBUG LoggerContext[name=33909752, org.apache.logging.log4j.core.LoggerContext@1807e3f6] started OK.
+&amp#27;[33m20:11:16.155 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+&amp#27;[m&amp#27;[33m20:11:16.158 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+&amp#27;[m&amp#27;[33m20:11:16.158 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+&amp#27;[m
+&amp#27;[32m20:11:16.360 [TestNG-tests-2] INFO  base.BaseUtils - Файл конфигурации config.properties успешно загружен.
+&amp#27;[m&amp#27;[0;36m
+==========================================================================================
+	Test Report																		
+	Date: 2025-01-18, 08:11PM														
+	Project: Suitecrm-automation
+	BASE_URL: http://localhost:8080											
+&amp#27;[0;36m
+==========================================================================================
+
+&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Configuring browser: firefox
+&amp#27;[m&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Configuring browser: chrome
+&amp#27;[m&amp#27;[32m20:11:17.066 [TestNG-test-Cucumber_Firefox-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.35.0 (resolved driver for Firefox 130)
+&amp#27;[m&amp#27;[32m20:11:17.091 [TestNG-test-Cucumber_Firefox-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\Username\.cache\selenium\geckodriver\win64\0.35.0\geckodriver.exe
+&amp#27;[m&amp#27;[32m20:11:17.118 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Browser firefox configured successfully.
+&amp#27;[mTest started: runScenario
+
+@Smoke
+Scenario: Checking main blocks on Home page   &amp#27;[90m# src/test/resources/features/ui/Home.feature:6&amp#27;[0m
+&amp#27;[32m20:11:17.505 [TestNG-test-Cucumber_Firefox-1] INFO  steps.ui.HomeSteps - Opening the Home page...
+&amp#27;[m&amp#27;[32m20:11:17.510 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 49 - let's create a new webdriver
+&amp#27;[m&amp#27;[32m20:11:17.722 [TestNG-test-Cucumber_Chrome-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 131.0.6778.264 (resolved driver for Chrome 131)
+&amp#27;[m&amp#27;[32m20:11:17.731 [TestNG-test-Cucumber_Chrome-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Username\.cache\selenium\chromedriver\win64\131.0.6778.264\chromedriver.exe
+&amp#27;[m&amp#27;[32m20:11:17.731 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Browser chrome configured successfully.
+&amp#27;[mTest started: runScenario
+
+@Smoke
+Scenario: Checking main blocks on Home page   &amp#27;[90m# src/test/resources/features/ui/Home.feature:6&amp#27;[0m
+&amp#27;[32m20:11:17.746 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.HomeSteps - Opening the Home page...
+&amp#27;[m&amp#27;[32m20:11:17.747 [TestNG-test-Cucumber_Chrome-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 48 - let's create a new webdriver
+&amp#27;[m&amp#27;[32m20:11:19.022 [TestNG-test-Cucumber_Chrome-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.7.0 / Selenium 4.27.0 / chrome 131.0.6778.265 windows
+&amp#27;[m&amp#27;[32m20:11:21.104 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.webdriver.BrowserResizer - Set browser size to 1366x768
+&amp#27;[m&amp#27;[32m20:11:21.131 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.7.0 / Selenium 4.27.0 / firefox 130.0 windows
+&amp#27;[m  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31mI am on the Home page&amp#27;[0m                 &amp#27;[90m# steps.ui.HomeSteps.iAmOnTheHomePage()&amp#27;[0m
+      &amp#27;[31mElement not found {By.xpath: //iframe[contains(@src, 'legacy/index.php?module=Home')]}
+Expected: visible
+Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.png
+Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:117)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:119)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:102)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8dcc49862dd298d86868c04366d452c8, findElement {using=xpath, value=//iframe[contains(@src, 'legacy/index.php?module=Home')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Username\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60846}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60846/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8dcc49862dd298d86868c04366d452c8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:64)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:39)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:30)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:101)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:91)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:62)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Calls"&amp#27;[0m                 &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Meetings"&amp#27;[0m               &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Top Open Opportunities"&amp#27;[0m &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Accounts"&amp#27;[0m               &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Leads"&amp#27;[0m                  &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Activity Stream"&amp#27;[0m        &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+
+    Embedding Checking main blocks on Home page [image/png 27632 bytes]
+
+&amp#27;[32m20:11:30.934 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
+&amp#27;[mTest failed: runScenario
+]]></system-out>
+    <system-err><![CDATA[янв. 18, 2025 8:11:21 PM org.openqa.selenium.firefox.FirefoxDriver <init>
+WARNING: CDP support for Firefox is deprecated and will be removed in future versions. Please switch to WebDriver BiDi.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Successful login&quot;, &quot;Login to SuiteCRM&quot;](2)" classname="runners.ChromeRunnerTest" time="2.102">
+    <system-out><![CDATA[Test started: runScenario
+
+@Smoke
+Scenario: Successful login          &amp#27;[90m# src/test/resources/features/ui/Login.feature:5&amp#27;[0m
+&amp#27;[32m20:11:33.442 [TestNG-test-Cucumber_Firefox-1] INFO  steps.ui.LoginSteps - Opening the login page...
+&amp#27;[m&amp#27;[32m20:11:33.442 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 49 - let's create a new webdriver
+&amp#27;[m&amp#27;[32m20:11:34.285 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.7.0 / Selenium 4.27.0 / chrome 131.0.6778.265 windows
+&amp#27;[m  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter valid credentials&amp#27;[0m    &amp#27;[90m# steps.ui.LoginSteps.i_enter_valid_credentials()&amp#27;[0m
+&amp#27;[32m20:11:34.657 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.LoginSteps - Checking presence of <scrm-home-menu-item> element...
+&amp#27;[m  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the login page&amp#27;[0m       &amp#27;[90m# steps.ui.LoginSteps.i_open_the_login_page()&amp#27;[0m
+&amp#27;[32m20:11:35.222 [TestNG-test-Cucumber_Firefox-1] INFO  steps.ui.LoginSteps - Attempting to enter valid credentials...
+&amp#27;[m&amp#27;[32m20:11:35.361 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.LoginSteps - <scrm-home-menu-item> is visible => We are on the home page!
+&amp#27;[m  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the SuiteCRM dashboard&amp#27;[0m &amp#27;[90m# steps.ui.LoginSteps.i_see_the_suite_crm_dashboard()&amp#27;[0m
+Test passed: runScenario
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Checking main blocks on Home page&quot;, &quot;SuiteCRM Home Page&quot;](1)" classname="runners.FirefoxRunnerTest" time="2.316">
+    <failure message="Element not found {By.xpath: //iframe[contains(@src, &apos;legacy/index.php?module=Home&apos;)]}&#10;Expected: visible&#10;Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.png&#10;Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.html&#10;Timeout: 10 s.&#10;Caused by: NoSuchElementException: Unable to locate element: //iframe[contains(@src, &apos;legacy/index.php?module=Home&apos;)]" type="Element not found {By.xpath"><![CDATA[Element not found {By.xpath: //iframe[contains(@src, 'legacy/index.php?module=Home')]}
+Expected: visible
+Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.png
+Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: Unable to locate element: //iframe[contains(@src, 'legacy/index.php?module=Home')]
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:117)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:119)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:102)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //iframe[contains(@src, 'legacy/index.php?module=Home')]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [cb8d0756-ef4b-48fd-9e92-c7d17eac2e23, findElement {using=xpath, value=//iframe[contains(@src, 'legacy/index.php?module=Home')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 130.0, moz:accessibilityChecks: false, moz:buildID: 20240829075237, moz:debuggerAddress: 127.0.0.1:7683, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 48564, moz:profile: C:\Users\Username\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:7683/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: cb8d0756-ef4b-48fd-9e92-c7d17eac2e23
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:64)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:39)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:30)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:101)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:91)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:62)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></failure>
+    <system-out><![CDATA[Test started: runScenario
+
+@Smoke
+Scenario: Successful login          &amp#27;[90m# src/test/resources/features/ui/Login.feature:5&amp#27;[0m
+&amp#27;[32m20:11:31.127 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.LoginSteps - Opening the login page...
+&amp#27;[m&amp#27;[32m20:11:31.128 [TestNG-test-Cucumber_Chrome-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 48 - let's create a new webdriver
+&amp#27;[m&amp#27;[32m20:11:31.938 [TestNG-test-Cucumber_Chrome-1] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide 7.7.0 / Selenium 4.27.0 / chrome 131.0.6778.265 windows
+&amp#27;[m  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31mI am on the Home page&amp#27;[0m                 &amp#27;[90m# steps.ui.HomeSteps.iAmOnTheHomePage()&amp#27;[0m
+      &amp#27;[31mElement not found {By.xpath: //iframe[contains(@src, 'legacy/index.php?module=Home')]}
+Expected: visible
+Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.png
+Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220292283.1.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: Unable to locate element: //iframe[contains(@src, 'legacy/index.php?module=Home')]
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:117)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:119)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:102)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //iframe[contains(@src, 'legacy/index.php?module=Home')]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [cb8d0756-ef4b-48fd-9e92-c7d17eac2e23, findElement {using=xpath, value=//iframe[contains(@src, 'legacy/index.php?module=Home')]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 130.0, moz:accessibilityChecks: false, moz:buildID: 20240829075237, moz:debuggerAddress: 127.0.0.1:7683, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 48564, moz:profile: C:\Users\Username\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:7683/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: cb8d0756-ef4b-48fd-9e92-c7d17eac2e23
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:64)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:39)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:30)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:101)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:91)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:62)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Calls"&amp#27;[0m                 &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Meetings"&amp#27;[0m               &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Top Open Opportunities"&amp#27;[0m &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Accounts"&amp#27;[0m               &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Leads"&amp#27;[0m                  &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI see block &amp#27;[0m&amp#27;[36m&amp#27;[1m"My Activity Stream"&amp#27;[0m        &amp#27;[90m# steps.ui.HomeSteps.iSeeBlock(java.lang.String)&amp#27;[0m
+
+    Embedding Checking main blocks on Home page [image/png 84220 bytes]
+
+&amp#27;[32m20:11:32.590 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
+&amp#27;[m  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the login page&amp#27;[0m       &amp#27;[90m# steps.ui.LoginSteps.i_open_the_login_page()&amp#27;[0m
+&amp#27;[32m20:11:32.891 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.LoginSteps - Attempting to enter valid credentials...
+&amp#27;[mTest failed: runScenario
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Successful login&quot;, &quot;Login to SuiteCRM&quot;](2)" classname="runners.FirefoxRunnerTest" time="4.016">
+    <system-out><![CDATA[
+&amp#27;[31mFailed scenarios:&amp#27;[0m
+file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:6 # Checking main blocks on Home page
+
+2 Scenarios (&amp#27;[31m1 failed&amp#27;[0m, &amp#27;[32m1 passed&amp#27;[0m)
+10 Steps (&amp#27;[31m1 failed&amp#27;[0m, &amp#27;[36m6 skipped&amp#27;[0m, &amp#27;[32m3 passed&amp#27;[0m)
+0m18,940s
+
+
+Element not found {By.xpath: //iframe[contains(@src, 'legacy/index.php?module=Home')]}
+Expected: visible
+Screenshot: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.png
+Page source: file:/C:/Users/Username/IdeaProjects/suitecrm-automation/build/reports/tests/1737220290295.0.html
+Timeout: 10 s.
+Caused by: NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:68)
+	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:117)
+	at com.codeborne.selenide.impl.WebElementSource.handleError(WebElementSource.java:119)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:102)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[contains(@src, 'legacy/index.php?module=Home')]"}
+  (Session info: chrome=131.0.6778.265)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8dcc49862dd298d86868c04366d452c8, findElement {using=xpath, value=//iframe[contains(@src, 'legacy/index.php?module=Home')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Username\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60846}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60846/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8dcc49862dd298d86868c04366d452c8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:64)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:39)
+	at com.codeborne.selenide.impl.WebElementSelector.findElement(WebElementSelector.java:30)
+	at com.codeborne.selenide.impl.ElementFinder.getWebElement(ElementFinder.java:101)
+	at com.codeborne.selenide.impl.WebElementSource.checkConditionAndReturnElement(WebElementSource.java:91)
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:78)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:24)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:27)
+	at com.codeborne.selenide.FluentCommand.execute(FluentCommand.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:160)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
+	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
+	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:62)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+
+Test suite finished: Cucumber_Chrome
+&amp#27;[32m20:11:35.593 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - No webdriver found for thread: 48 - nothing to close
+&amp#27;[m&amp#27;[32m20:11:35.594 [Dead threads watchdog] INFO  com.codeborne.selenide.impl.DeadThreadsWatchdog - No webdriver found for thread: 48 - nothing to close
+&amp#27;[m  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter valid credentials&amp#27;[0m    &amp#27;[90m# steps.ui.LoginSteps.i_enter_valid_credentials()&amp#27;[0m
+&amp#27;[32m20:11:36.813 [TestNG-test-Cucumber_Firefox-1] INFO  steps.ui.LoginSteps - Checking presence of <scrm-home-menu-item> element...
+&amp#27;[m&amp#27;[32m20:11:37.303 [TestNG-test-Cucumber_Firefox-1] INFO  steps.ui.LoginSteps - <scrm-home-menu-item> is visible => We are on the home page!
+&amp#27;[m  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the SuiteCRM dashboard&amp#27;[0m &amp#27;[90m# steps.ui.LoginSteps.i_see_the_suite_crm_dashboard()&amp#27;[0m
+Test passed: runScenario
+]]></system-out>
+  </testcase>
+</testsuite>

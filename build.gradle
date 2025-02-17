@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'io.qameta.allure' version "2.12.0"
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+/*
+Чекать новые версии тут https://mvnrepository.com/
+ */
+dependencies {
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.24.3'
+    testImplementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.24.3'
+
+    implementation 'com.codeborne:selenide:7.7.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
+    implementation 'io.qameta.allure:allure-selenide:2.29.1'
+    implementation 'io.qameta.allure:allure-rest-assured:2.29.1'
+    implementation 'io.qameta.allure:allure-testng:2.29.1'
+    implementation 'org.testng:testng:7.7.1'
+
+    implementation 'org.json:json:20250107'
+
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.24.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.24.3'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+
+    implementation 'com.epam.healenium:tree-comparing:0.4.14'
+
+    runtimeOnly 'org.aspectj:aspectjweaver:1.9.22.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+}
+
+group = 'Suitecrm-automation'
+version = '1.0-SNAPSHOT'
+description = 'suitecrm-automation'
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('test') {
+    useTestNG()
+}

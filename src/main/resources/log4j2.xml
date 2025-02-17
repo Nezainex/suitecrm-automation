@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <!-- Консольный аппендер с цветовым выделением уровней логирования -->
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout disableAnsi="false" charset="UTF-8"
+                           pattern="%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=bright black}"/>
+        </Console>
+
+        <!-- Файловый аппендер для записи логов в файл -->
+        <File name="LogToFile" fileName="C:/Users/Username/IdeaProjects/suitecrm-automation/logs/logger4j.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Логгер для пакета тестов с уровнем DEBUG -->
+        <Logger name="src.test.java" level="debug" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <!-- Отключение логов AllureLifecycle -->
+        <Logger name="io.qameta.allure.AllureLifecycle" level="off" additivity="false">
+        </Logger>
+
+        <!-- Корневой логгер с уровнем INFO -->
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

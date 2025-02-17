@@ -1,0 +1,7 @@
+steps\api\AuthSteps.class
+steps\ui\HomeSteps.class
+steps\ui\LoginSteps.class
+runners\ChromeRunnerTest.class
+steps\api\CSRFHelper.class
+runners\FirefoxRunnerTest.class
+hooks\Hooks.class

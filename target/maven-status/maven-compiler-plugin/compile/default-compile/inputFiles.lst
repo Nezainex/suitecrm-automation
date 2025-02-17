@@ -1,0 +1,16 @@
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\base\BasePage.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\base\BaseUtils.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\CustomAnnotations\RetryCountIfFailed.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\pages\HomePage.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\pages\LoginPage.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\service\ConfProperties.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\service\LoggingConfProperties.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\AnnotationTransformer.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\ConsoleColors.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\DateTimeUtils.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\ProjectConstants.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\ReportUtils.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\RetryAnalyzer.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\TestListener.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\TestSuiteListener.java
+C:\Users\Username\IdeaProjects\suitecrm-automation\src\main\java\utils\TestUtils.java
