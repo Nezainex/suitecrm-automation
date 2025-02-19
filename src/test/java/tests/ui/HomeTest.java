@@ -1,12 +1,12 @@
 package tests.ui;
 
-import base.BaseTest;
 import io.qameta.allure.Allure;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import tests.BaseUITest;
 import utils.listeners.TestListener;
 import utils.listeners.TestSuiteListener;
 
@@ -15,7 +15,7 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.$x;
 
 @Listeners({TestListener.class, TestSuiteListener.class})
-public class HomeTest extends BaseTest {
+public class HomeTest extends BaseUITest {
 
     private HomePage homePage;
 

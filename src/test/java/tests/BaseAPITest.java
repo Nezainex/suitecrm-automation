@@ -1,4 +1,4 @@
 package tests;
 
-public class BaseAPITest {
+public abstract class BaseAPITest extends BaseTest {
 }

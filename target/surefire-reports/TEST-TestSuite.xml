@@ -79,7 +79,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
@@ -119,7 +119,7 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -209,7 +209,7 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 &amp#27;[m&amp#27;[33m20:11:16.158 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
 &amp#27;[m&amp#27;[33m20:11:16.158 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
 &amp#27;[m
-&amp#27;[32m20:11:16.360 [TestNG-tests-2] INFO  base.BaseUtils - Файл конфигурации config.properties успешно загружен.
+&amp#27;[32m20:11:16.360 [TestNG-tests-2] INFO  utils.BaseUtils - Файл конфигурации config.properties успешно загружен.
 &amp#27;[m&amp#27;[0;36m
 ==========================================================================================
 	Test Report																		
@@ -219,11 +219,11 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 &amp#27;[0;36m
 ==========================================================================================
 
-&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Configuring browser: firefox
-&amp#27;[m&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Configuring browser: chrome
+&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Firefox-1] INFO  utils.BaseUtils - Configuring browser: firefox
+&amp#27;[m&amp#27;[32m20:11:16.661 [TestNG-test-Cucumber_Chrome-1] INFO  utils.BaseUtils - Configuring browser: chrome
 &amp#27;[m&amp#27;[32m20:11:17.066 [TestNG-test-Cucumber_Firefox-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.35.0 (resolved driver for Firefox 130)
 &amp#27;[m&amp#27;[32m20:11:17.091 [TestNG-test-Cucumber_Firefox-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\Username\.cache\selenium\geckodriver\win64\0.35.0\geckodriver.exe
-&amp#27;[m&amp#27;[32m20:11:17.118 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Browser firefox configured successfully.
+&amp#27;[m&amp#27;[32m20:11:17.118 [TestNG-test-Cucumber_Firefox-1] INFO  utils.BaseUtils - Browser firefox configured successfully.
 &amp#27;[mTest started: runScenario
 
 @Smoke
@@ -232,7 +232,7 @@ Scenario: Checking main blocks on Home page   &amp#27;[90m# src/test/resources/f
 &amp#27;[m&amp#27;[32m20:11:17.510 [TestNG-test-Cucumber_Firefox-1] INFO  com.codeborne.selenide.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 49 - let's create a new webdriver
 &amp#27;[m&amp#27;[32m20:11:17.722 [TestNG-test-Cucumber_Chrome-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 131.0.6778.264 (resolved driver for Chrome 131)
 &amp#27;[m&amp#27;[32m20:11:17.731 [TestNG-test-Cucumber_Chrome-1] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Username\.cache\selenium\chromedriver\win64\131.0.6778.264\chromedriver.exe
-&amp#27;[m&amp#27;[32m20:11:17.731 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Browser chrome configured successfully.
+&amp#27;[m&amp#27;[32m20:11:17.731 [TestNG-test-Cucumber_Chrome-1] INFO  utils.BaseUtils - Browser chrome configured successfully.
 &amp#27;[mTest started: runScenario
 
 @Smoke
@@ -261,7 +261,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
@@ -301,7 +301,7 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -350,7 +350,7 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 
     Embedding Checking main blocks on Home page [image/png 27632 bytes]
 
-&amp#27;[32m20:11:30.934 [TestNG-test-Cucumber_Chrome-1] INFO  base.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
+&amp#27;[32m20:11:30.934 [TestNG-test-Cucumber_Chrome-1] INFO  utils.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
 &amp#27;[mTest failed: runScenario
 ]]></system-out>
     <system-err><![CDATA[янв. 18, 2025 8:11:21 PM org.openqa.selenium.firefox.FirefoxDriver <init>
@@ -393,7 +393,7 @@ Caused by: NoSuchElementException: Unable to locate element: //iframe[contains(@
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
@@ -432,7 +432,7 @@ Session ID: cb8d0756-ef4b-48fd-9e92-c7d17eac2e23
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -498,7 +498,7 @@ Caused by: NoSuchElementException: Unable to locate element: //iframe[contains(@
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
@@ -537,7 +537,7 @@ Session ID: cb8d0756-ef4b-48fd-9e92-c7d17eac2e23
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -586,7 +586,7 @@ Session ID: cb8d0756-ef4b-48fd-9e92-c7d17eac2e23
 
     Embedding Checking main blocks on Home page [image/png 84220 bytes]
 
-&amp#27;[32m20:11:32.590 [TestNG-test-Cucumber_Firefox-1] INFO  base.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
+&amp#27;[32m20:11:32.590 [TestNG-test-Cucumber_Firefox-1] INFO  utils.BaseUtils - Скриншот (Allure + файл) сохранён для сценария: Checking main blocks on Home page
 &amp#27;[m  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI open the login page&amp#27;[0m       &amp#27;[90m# steps.ui.LoginSteps.i_open_the_login_page()&amp#27;[0m
 &amp#27;[32m20:11:32.891 [TestNG-test-Cucumber_Chrome-1] INFO  steps.ui.LoginSteps - Attempting to enter valid credentials...
 &amp#27;[mTest failed: runScenario
@@ -620,7 +620,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {"
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at ✽.I am on the Home page(file:///C:/Users/Username/IdeaProjects/suitecrm-automation/src/test/resources/features/ui/Home.feature:7)
@@ -660,7 +660,7 @@ Session ID: 8dcc49862dd298d86868c04366d452c8
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
 	at jdk.proxy2/jdk.proxy2.$Proxy35.shouldBe(Unknown Source)
-	at base.BasePage.switchToIframeWithWait(BasePage.java:124)
+	at pages.BasePage.switchToIframeWithWait(BasePage.java:124)
 	at pages.HomePage.switchToHomePageIframe(HomePage.java:215)
 	at steps.ui.HomeSteps.iAmOnTheHomePage(HomeSteps.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
