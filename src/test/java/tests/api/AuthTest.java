@@ -1,6 +1,5 @@
 package tests.api;
 
-import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
@@ -9,6 +8,8 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.listeners.TestListener;
 import utils.listeners.TestSuiteListener;
+import utils.config.ProjectConfig;
+import utils.config.ConfigReader;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
@@ -17,19 +18,19 @@ import static org.testng.Assert.assertEquals;
 public class AuthTest {
     private static final Logger logger = LoggerFactory.getLogger(AuthTest.class);
 
-    private static final String BASE_URL = "http://localhost:8080";
-    private static final String GRAPHQL_ENDPOINT = "/api/graphql";
+    // Получаем конфигурацию из файла
+    private static final ProjectConfig CONFIG = ConfigReader.getConfig();
 
     @Test(description = "API: Логин через GraphQL")
     public void testLoginWithGraphQL() {
-        Allure.step("Получаем XSRF-токен с помощью GET /login", this::getXsrfTokenAndPerformLogin);
+        getXsrfTokenAndPerformLogin();
     }
 
     @Step("Получаем XSRF-токен и выполняем запрос на логин")
     private void getXsrfTokenAndPerformLogin() {
         // 1. Делаем GET-запрос для получения XSRF-TOKEN
         Response getResponse = given()
-                .baseUri(BASE_URL)
+                .baseUri(CONFIG.getBaseUrl()) // Используем baseUrl из конфигурации
                 .header("User-Agent", "PostmanRuntime/7.43.0") // Устанавливаем User-Agent из Postman
                 .get("/login")
                 .then()
@@ -50,16 +51,16 @@ public class AuthTest {
         {
           "operationName": "login",
           "variables": {
-            "username": "user",
-            "password": "bitnami"
+            "username": "%s",
+            "password": "%s"
           },
           "query": "mutation login($username: String!, $password: String!) {\\n  login(username: $username, password: $password) {\\n    token\\n    user {\\n      id\\n      username\\n    }\\n  }\\n}"
         }
-        """;
+        """.formatted(CONFIG.getValidUsername(), CONFIG.getValidPassword());  // Подставляем данные из конфигурации
 
         // 3. Выполняем POST-запрос
         Response loginResponse = given()
-                .baseUri(BASE_URL)
+                .baseUri(CONFIG.getBaseUrl()) // Используем baseUrl из конфигурации
                 .cookie("XSRF-TOKEN", xsrfCookie) // Передаем токен в куках
                 .header("X-XSRF-TOKEN", xsrfCookie) // Передаем токен в заголовке
                 .header("Referer", "http://localhost:8080/login") // Устанавливаем Referer
@@ -68,7 +69,7 @@ public class AuthTest {
                 .contentType("application/json") // Устанавливаем тип содержимого
                 .body(graphqlPayload)
                 .log().all() // Логируем весь запрос
-                .post(GRAPHQL_ENDPOINT)
+                .post("/api/graphql") // Используем заранее определённый эндпоинт
                 .then()
                 .log().all() // Логируем весь ответ
                 .extract().response();
@@ -82,9 +83,12 @@ public class AuthTest {
         String responseBody = loginResponse.getBody().asString();
         logger.info("Ответ GraphQL: {}", responseBody);
 
-        Allure.step("Проверяем, что тело ответа содержит данные пользователя", () -> {
-            assert responseBody.contains("token") : "Токен авторизации не найден в ответе";
-            assert responseBody.contains("username") : "Имя пользователя не найдено в ответе";
-        });
+        verifyResponseContainsUserData(responseBody);
+    }
+
+    @Step("Проверяем, что тело ответа содержит данные пользователя")
+    private void verifyResponseContainsUserData(String responseBody) {
+        assert responseBody.contains("token") : "Токен авторизации не найден в ответе";
+        assert responseBody.contains("username") : "Имя пользователя не найдено в ответе";
     }
 }

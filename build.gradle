@@ -1,8 +1,16 @@
 plugins {
     id 'java'
-    id 'maven-publish'
-    id 'io.qameta.allure' version "2.12.0"
-    id 'io.freefair.lombok' version "8.12.1"
+    id 'io.qameta.allure' version '2.12.0'
+    id 'io.freefair.lombok' version '8.12.1'
+}
+
+group = 'SuiteCRM-automation'
+version = '1.0-SNAPSHOT'
+description = 'SuiteCRM-automation'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
@@ -10,54 +18,100 @@ repositories {
     maven {
         url = uri('https://repo.maven.apache.org/maven2/')
     }
+    maven {
+        url = uri('https://plugins.gradle.org/m2/')
+    }
 }
 
 /*
 Чекать новые версии тут https://mvnrepository.com/
  */
 dependencies {
-    testImplementation 'io.rest-assured:rest-assured:5.5.0'
-    testImplementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.24.3'
-    testImplementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.24.3'
+    // TestNG
+    testImplementation 'org.testng:testng:7.11.0'
+    testImplementation 'org.jetbrains:annotations:26.0.2'
 
-    testImplementation 'com.codeborne:selenide:7.7.1'
+    // Selenide
+    testImplementation 'com.codeborne:selenide:7.7.2'
+    testImplementation 'com.codeborne:selenide-proxy:7.7.2'
+    testImplementation 'com.codeborne:selenide-testng:7.7.2'
+    testImplementation 'com.codeborne:selenide-selenoid:7.7.2'
+
+    // Selenium
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1'
-    testImplementation 'io.qameta.allure:allure-selenide:2.29.1'
-    testImplementation 'io.qameta.allure:allure-rest-assured:2.29.1'
-    testImplementation 'io.qameta.allure:allure-testng:2.29.1'
-    testImplementation 'org.testng:testng:7.7.1'
-
-    testImplementation 'org.json:json:20250107'
-
-    testImplementation 'org.yaml:snakeyaml:2.4'
-    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
-
-
-    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
-
+    testImplementation 'org.seleniumhq.selenium:selenium-devtools-v132:4.28.1'    // В рабочем проекте ...v125:4.23.1 , что правильно, т.к. там другая верся хрома
+    // Log4j2
+    testImplementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.24.3'
     testImplementation 'org.apache.logging.log4j:log4j-api:2.24.3'
     testImplementation 'org.apache.logging.log4j:log4j-core:2.24.3'
-    testImplementation 'org.slf4j:slf4j-api:2.0.16'
 
-    testImplementation 'com.epam.healenium:tree-comparing:0.4.14'
+    // Jackson + YAML
+    testImplementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
+    testImplementation 'org.yaml:snakeyaml:1.2.4'
 
-    runtimeOnly 'org.aspectj:aspectjweaver:1.9.22.1'
+    // JSONPath
+    testImplementation 'com.jayway.jsonpath:json-path:2.9.0'
 
-    compileOnly 'org.projectlombok:lombok:1.18.36'
+    // Allure (библиотеки)
+    testImplementation 'io.qameta.allure:allure-gradle:2.8.1'
+    testImplementation 'io.qameta.allure:allure-testng:2.9.1'
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.29.1'
+    testImplementation 'io.qameta.allure:allure-selenide:2.29.1'
+    testImplementation 'io.qameta.allure:allure-attachments:2.29.1'
+    testImplementation 'io.qameta.allure:allure-java-commons:2.29.1'
+    testImplementation 'io.qameta.allure:allure-descriptions-javadoc:2.29.1'
+    testImplementation 'io.qameta.allure:allure-commandline:2.32.2'
+    // AspectJ Weaver
+    testImplementation 'org.aspectj:aspectjweaver:1.9.22.1'
+
+    // REST-assured
+    testImplementation 'io.rest-assured:rest-assured:5.5.1'
+    testImplementation 'io.rest-assured:json-schema-validator:5.5.1'
+
+    // Lombok
+    testCompileOnly 'org.projectlombok:lombok:1.18.36'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    // WebDriverManager (В пет проекте он есть)
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
 }
 
-group = 'Suitecrm-automation'
-version = '1.0-SNAPSHOT'
-description = 'suitecrm-automation'
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
-
-tasks.withType(JavaCompile).configureEach {
+// Отключаем предупреждение о процессорах аннотаций на пути компиляции
+compileTestJava {
+  //options.compilerArgs += ["-proc:none"]   //если раскомментировать - вырубится lombok и тесты не запустятся.
     options.encoding = 'UTF-8'
 }
 
-tasks.named('test') {
+// Настройки тестов
+test {
     useTestNG()
+    // Чтобы тесты всегда гонялись «с нуля»
+    dependsOn "clean"
+
+    doFirst {
+        // Удаляем старые allure-results
+        delete fileTree("$buildDir/allure-results") {
+            include "**/*"
+        }
+    }
+
+    // Пробрасываем нужные системные свойства
+    systemProperty "screenshot.passed_steps", System.getProperty("screenshot.passed_steps")
+
+    // Логгирование результатов тестов в консоль
+    testLogging {
+        events "PASSED", "SKIPPED", "FAILED"
+    }
+}
+
+// Можно отключить HTML-отчёт, если не нужен
+tasks.withType(Test).configureEach {
+    reports.html.required.set(false)
+    // Проброс переменных окружения
+    systemProperty 'env', System.getProperty('env', 'env')
+}
+
+allure {
+    version = "2.32.0"
 }

@@ -3,29 +3,27 @@ package tests.api;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.config.ProjectConfig;
+import utils.config.ConfigReader;
 
 import static io.restassured.RestAssured.given;
 
 public class CSRFHelper {
     private static final Logger logger = LoggerFactory.getLogger(CSRFHelper.class);
 
-    // Правим на тот эндпоинт, который реально существует:
-    private static final String BASE_URL = "http://localhost:8080";
-    private static final String LOGIN_ENDPOINT = "/login ";
-
-    // Логин/пароль меняйте при необходимости
-    private static final String VALID_USERNAME = "user";
-    private static final String VALID_PASSWORD = "bitnami";
+    // Получаем конфигурацию из файла
+    private static final ProjectConfig CONFIG = ConfigReader.getConfig();
 
     public static String getCSRFToken() {
-        logger.info("Пробуем получить CSRF-токен через POST: {}{}", BASE_URL, LOGIN_ENDPOINT);
+        logger.info("Пробуем получить CSRF-токен через POST: {}{}", CONFIG.getBaseUrl(), CONFIG.getLoginEndpoint());
 
+        // Используем значения из конфигурации
         Response loginResponse = given()
-                .baseUri("http://localhost:8080")
+                .baseUri(CONFIG.getBaseUrl()) // BASE_URL из конфигурации
                 .contentType("application/x-www-form-urlencoded")
-                .formParam("username", VALID_USERNAME)
-                .formParam("password", VALID_PASSWORD)
-                .post("/login")
+                .formParam("username", CONFIG.getValidUsername()) // VALID_USERNAME из конфигурации
+                .formParam("password", CONFIG.getValidPassword()) // VALID_PASSWORD из конфигурации
+                .post(CONFIG.getLoginEndpoint()) // LOGIN_ENDPOINT из конфигурации
                 .then()
                 .extract().response();
 

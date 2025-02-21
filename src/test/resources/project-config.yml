@@ -12,10 +12,6 @@ loginEndpoint: "/login"
 validUsername: "user"
 validPassword: "bitnami"
 
-# Invalid credentials
-invalidUsername: "invalid"
-invalidPassword: "invalid"
-
 # Numbers and letters
 saltUpperAndLowerLetters: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 saltNumbers: "1234567890"

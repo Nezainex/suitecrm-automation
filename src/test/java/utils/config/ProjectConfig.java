@@ -8,7 +8,6 @@ import java.util.Map;
 @Setter
 @Getter
 public class ProjectConfig {
-    // ---- Getters / Setters ----
     private String browserChrome;
     private String browserFirefox;
 
@@ -17,9 +16,6 @@ public class ProjectConfig {
 
     private String validUsername;
     private String validPassword;
-
-    private String invalidUsername;
-    private String invalidPassword;
 
     private String saltUpperAndLowerLetters;
     private String saltNumbers;
@@ -34,5 +30,4 @@ public class ProjectConfig {
     private String screenshotPath;
 
     private Map<String, String> colors;
-
 }

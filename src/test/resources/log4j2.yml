@@ -1,0 +1,35 @@
+Configuration:
+  status: DEBUG
+
+  Appenders:
+    Console:
+      name: "LogToConsole"
+      target: "SYSTEM_OUT"
+      PatternLayout:
+        disableAnsi: false
+        charset: "UTF-8"
+        pattern: "%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=bright black}"
+
+    File:
+      name: "LogToFile"
+      fileName: "C:/Users/Username/IdeaProjects/suitecrm-automation/logs/logger4j.log"
+      PatternLayout:
+        Pattern: "%d %p %c{1.} [%t] %m%n"
+
+  Loggers:
+    Logger:
+      - name: "src.test.java"
+        level: "debug"
+        additivity: false
+        AppenderRef:
+          - ref: "LogToConsole"
+
+      - name: "io.qameta.allure.AllureLifecycle"
+        level: "off"
+        additivity: false
+
+    Root:
+      level: "info"
+      AppenderRef:
+        - ref: "LogToConsole"
+        - ref: "LogToFile"

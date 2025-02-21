@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.Reporter;
+import tests.BaseUITest;
 
 import java.security.SecureRandom;
 
@@ -14,9 +15,7 @@ public class TestUtils {
     private static final SelenideElement LOGIN_PAGE_IDENTIFIER = $x("//img[@src='legacy/themes/default/images/company_logo.png']");
 
     public static void loadBaseUrlPage() {
-        // Было: Selenide.open(BaseUtils.getBaseUrl());
-        // Остаётся аналогично, только теперь baseUrl берётся из YAML:
-        Selenide.open(BaseUtils.getBaseUrl());
+        Selenide.open(BaseUITest.getBaseUrl());
         waitForPageLoaded();
     }
 
