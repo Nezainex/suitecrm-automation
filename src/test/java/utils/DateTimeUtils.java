@@ -4,221 +4,144 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateTimeUtils {
-    public static String getCurrentDateTime() {
-        Date date = new Date();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd, hh:mma");
 
-        return dateFormat.format(date);
+    // Индексы массива: 1..12
+    // MONTHS_ARRAY[1] = "Jan", MONTHS_ARRAY[12] = "Dec"
+    private static final String[] MONTHS_ARRAY = {
+            "Error", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    };
+
+    // Индексы массива: 1..7
+    // DAYS_ARRAY[1] = "Mon", DAYS_ARRAY[7] = "Sun"
+    private static final String[] DAYS_ARRAY = {
+            "Error", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"
+    };
+
+    private DateTimeUtils() {
+        // закрытый конструктор, утилитный класс
     }
 
+    // Возвращает текущую дату-время в формате "yyyy-MM-dd, hh:mma"
+    public static String getCurrentDateTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd, hh:mma");
+        return dateFormat.format(new Date());
+    }
+
+    // Преобразует миллисекунды в формат "X min Y sec"
     public static String getTimeInMinSecFormat(long time) {
         int minutes = (int) ((time / 1000) / 60);
-        int seconds = (int) (time / 1000) % 60;
-
-        return "" + minutes + " min " + seconds + " sec";
+        int seconds = (int) ((time / 1000) % 60);
+        return minutes + " min " + seconds + " sec";
     }
 
+    // Возвращает количество дней в месяце (учитывая високосный год для февраля)
     public static int daysInMonth(int month, int year) {
-        int numDays;
-
-        switch (month) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                numDays = 31;
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                numDays = 30;
-                break;
-            case 2:
-                if (((year % 4 == 0) &&
-                        !(year % 100 == 0))
-                        || (year % 400 == 0))
-                    numDays = 29;
-                else
-                    numDays = 28;
-                break;
-            default:
-
-                return 0;
+        if (month < 1 || month > 12) {
+            return 0;
         }
-
-        return numDays;
+        if (month == 2) {
+            return isLeapYear(year) ? 29 : 28;
+        }
+        // Месяцы с 31 днями
+        if (month == 1 || month == 3 || month == 5 || month == 7 ||
+                month == 8 || month == 10 || month == 12) {
+            return 31;
+        }
+        // Остальные (4,6,9,11) - 30 дней
+        return 30;
     }
 
+    // Проверка високосного года
+    private static boolean isLeapYear(int year) {
+        // год високосный:
+        // кратен 400, либо кратен 4, но не кратен 100
+        return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+    }
+
+    // Возвращаем строковое представление месяца по его номеру (1..12)
     public static String returnMonth(int number) {
-        if (number > 0 && number < 13) {
-            switch (number) {
-                case 1:
-                    return "Jan";
-                case 2:
-                    return "Feb";
-                case 3:
-                    return "Mar";
-                case 4:
-                    return "Apr";
-                case 5:
-                    return "May";
-                case 6:
-                    return "Jun";
-                case 7:
-                    return "Jul";
-                case 8:
-                    return "Aug";
-                case 9:
-                    return "Sep";
-                case 10:
-                    return "Oct";
-                case 11:
-                    return "Nov";
-                case 12:
-                    return "Dec";
-            }
+        if (number >= 1 && number <= 12) {
+            return MONTHS_ARRAY[number];
         }
-
         return "Error";
     }
 
+    // Возвращаем номер месяца по строке ("Jan" -> 1), иначе 0
     public static int returnMonth(String month) {
-        if (month != null) {
-            switch (month) {
-                case "Jan":
-                    return 1;
-                case "Feb":
-                    return 2;
-                case "Mar":
-                    return 3;
-                case "Apr":
-                    return 4;
-                case "May":
-                    return 5;
-                case "Jun":
-                    return 6;
-                case "Jul":
-                    return 7;
-                case "Aug":
-                    return 8;
-                case "Sep":
-                    return 9;
-                case "Oct":
-                    return 10;
-                case "Nov":
-                    return 11;
-                case "Dec":
-                    return 12;
+        if (month == null) return 0;
+        for (int i = 1; i < MONTHS_ARRAY.length; i++) {
+            if (MONTHS_ARRAY[i].equalsIgnoreCase(month)) {
+                return i;
             }
         }
-
         return 0;
     }
 
+    // Возвращаем строку дня недели (1..7) => "Mon"
     public static String returnDayOfTheWeek(int number) {
-        if (number > 0 && number < 8) {
-            switch (number) {
-                case 1:
-                    return "Mon";
-                case 2:
-                    return "Tue";
-                case 3:
-                    return "Wed";
-                case 4:
-                    return "Thu";
-                case 5:
-                    return "Fri";
-                case 6:
-                    return "Sat";
-                case 7:
-                    return "Sun";
-            }
+        if (number >= 1 && number <= 7) {
+            return DAYS_ARRAY[number];
         }
-
         return "Error";
     }
 
+    // Возвращаем номер дня недели по строке ("Mon"->1), иначе 0
     public static int returnDayOfTheWeek(String day) {
-        if (day != null) {
-            switch (day) {
-                case "Mon":
-                    return 1;
-                case "Tue":
-                    return 2;
-                case "Wed":
-                    return 3;
-                case "Thu":
-                    return 4;
-                case "Fri":
-                    return 5;
-                case "Sat":
-                    return 6;
-                case "Sun":
-                    return 7;
+        if (day == null) return 0;
+        for (int i = 1; i < DAYS_ARRAY.length; i++) {
+            if (DAYS_ARRAY[i].equalsIgnoreCase(day)) {
+                return i;
             }
         }
-
         return 0;
     }
 
-    public static String returnDate(int date) {
-        if (date < 10) {
-
-            return "0" + date;
-        } else {
-
-            return String.valueOf(date);
-        }
-    }
-
+    // Формируем диапазон из 8 дней (сегодня + 7) с выводом дня недели, месяца, даты
     public static String getEightDaysFromDate(String day, int month, int date, int year) {
-        int currentYear = year;
-        StringBuilder stringBuilder = new StringBuilder();
-
+        // Валидации
         if (day == null || returnDayOfTheWeek(day) == 0 ||
-                returnMonth(month).equals("Error") ||
-                month <= 0 ||
-                date <= 0 ||
-                date > (daysInMonth(month, year))
-        ) {
-
+                "Error".equals(returnMonth(month)) ||
+                month < 1 || month > 12 || date < 1 || date > daysInMonth(month, year)) {
             return "Please enter correct data.";
+        }
 
-        } else {
-            int currentDay = returnDayOfTheWeek(day);
-            int currentMonth = month;
-            int currentDate = date;
+        StringBuilder sb = new StringBuilder();
+        int currentDay = returnDayOfTheWeek(day);
+        int currentMonth = month;
+        int currentDate = date;
+        int currentYear = year;
 
-            for (int i = 0; i <= 7; i++) {
-                if (currentDay != 7) {
-                    stringBuilder.append(returnDayOfTheWeek(currentDay)).append(", ");
-                    currentDay++;
+        for (int i = 0; i <= 7; i++) {
+            sb.append(returnDayOfTheWeek(currentDay)).append(", ");
+            // инкремент дня недели
+            currentDay = (currentDay == 7) ? 1 : currentDay + 1;
+
+            // проверяем, не вышли ли за предел дней в месяце
+            if (currentDate <= daysInMonth(currentMonth, currentYear)) {
+                sb.append(returnMonth(currentMonth)).append(" ")
+                        .append(returnDate(currentDate)).append(", ");
+                currentDate++;
+            } else {
+                // переходим на следующий месяц
+                if (currentMonth == 12) {
+                    currentMonth = 1;
+                    currentYear += 1;
                 } else {
-                    stringBuilder.append(returnDayOfTheWeek(currentDay)).append(", ");
-                    currentDay = 1;
+                    currentMonth++;
                 }
-
-                if (currentDate <= daysInMonth(currentMonth, currentYear)) {
-                    stringBuilder.append(returnMonth(currentMonth)).append(" ").append(returnDate(currentDate)).append(", ");
-                    currentDate++;
-                } else {
-                    if (currentMonth != 12) {
-                        currentMonth++;
-                    } else {
-                        currentMonth = 1;
-                        currentYear = year + 1;
-                    }
-                    currentDate = 1;
-                    stringBuilder.append(returnMonth(currentMonth)).append(" ").append(returnDate(currentDate)).append(", ");
-                    currentDate++;
-                }
+                currentDate = 1;
+                sb.append(returnMonth(currentMonth)).append(" ")
+                        .append(returnDate(currentDate)).append(", ");
+                currentDate++;
             }
         }
+        // убираем завершающую запятую и пробел
+        return sb.substring(0, sb.length() - 2);
+    }
 
-        return stringBuilder.substring(0, stringBuilder.length() - 2);
+    // Форматирование числа даты (1..9 => "01")
+    public static String returnDate(int date) {
+        return (date < 10) ? "0" + date : String.valueOf(date);
     }
 }

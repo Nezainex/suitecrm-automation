@@ -14,8 +14,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import utils.config.ConfigReader;
+import utils.config.ProjectConfig;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.screenshot;
@@ -24,6 +27,28 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public abstract class BaseUITest extends BaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(BaseUITest.class);
+    private static final ProjectConfig CONFIG = ConfigReader.getConfig();
+
+    private static final Map<String, Runnable> BROWSER_CONFIGURATIONS = new HashMap<>();
+
+    static {
+        BROWSER_CONFIGURATIONS.put("chrome", () -> {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--remote-allow-origins=*");
+            Configuration.browserCapabilities = chromeOptions;
+            Configuration.browser = CONFIG.getBrowserChrome();
+        });
+
+        BROWSER_CONFIGURATIONS.put("firefox", () -> {
+            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.addArguments("--start-maximized");
+            Configuration.browserCapabilities = firefoxOptions;
+            Configuration.browser = CONFIG.getBrowserFirefox();
+        });
+    }
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
@@ -39,40 +64,25 @@ public abstract class BaseUITest extends BaseTest {
      * Получение базового URL из YAML-конфига.
      */
     public static String getBaseUrl() {
-        return ConfigReader.getConfig().getBaseUrl();
+        return CONFIG.getBaseUrl();
     }
 
     private void configureBrowser(String browser) {
         if (browser == null || browser.isEmpty()) {
-            browser = ConfigReader.getConfig().getBrowserChrome();
+            browser = CONFIG.getBrowserChrome();
         }
 
         logger.info("Настройка браузера: {}", browser);
 
-        switch (browser.toLowerCase()) {
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--start-maximized");
-                chromeOptions.addArguments("--remote-allow-origins=*");
-                Configuration.browserCapabilities = chromeOptions;
-                Configuration.browser = ConfigReader.getConfig().getBrowserChrome();
-                break;
-
-            case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.addArguments("--start-maximized");
-                Configuration.browserCapabilities = firefoxOptions;
-                Configuration.browser = ConfigReader.getConfig().getBrowserFirefox();
-                break;
-
-            default:
-                throw new IllegalArgumentException("Браузер " + browser + " не поддерживается.");
+        Runnable browserSetup = BROWSER_CONFIGURATIONS.get(browser.toLowerCase());
+        if (browserSetup != null) {
+            browserSetup.run();
+        } else {
+            throw new IllegalArgumentException("Браузер " + browser + " не поддерживается.");
         }
 
-        Configuration.timeout = ConfigReader.getConfig().getDefaultTimeout();
-        Configuration.pageLoadTimeout = ConfigReader.getConfig().getPageLoadTimeout();
+        Configuration.timeout = CONFIG.getDefaultTimeout();
+        Configuration.pageLoadTimeout = CONFIG.getPageLoadTimeout();
         Configuration.reopenBrowserOnFail = true;
         Configuration.pageLoadStrategy = "normal";
         Configuration.headless = false;

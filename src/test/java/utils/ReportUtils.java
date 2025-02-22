@@ -6,6 +6,8 @@ import tests.BaseUITest;
 import utils.config.ConfigReader;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ReportUtils {
 
@@ -19,23 +21,25 @@ public class ReportUtils {
 
     private static boolean headerLogged = false; // Флаг для предотвращения повторного логирования заголовка
 
+    private static final Map<Integer, String> TEST_STATUS_MAP = new HashMap<>();
+
+    static {
+        TEST_STATUS_MAP.put(ITestResult.SUCCESS, getColor("GREEN") + "PASS" + getColor("RESET"));
+        TEST_STATUS_MAP.put(ITestResult.FAILURE, getColor("RED") + "FAIL" + getColor("RESET"));
+    }
+
     /**
      * Возвращает цвет из YAML-файла по ключу (например, "GREEN" или "RED").
      * Если ключ не найден, возвращает пустую строку, чтобы избежать NPE.
      */
     private static String getColor(String colorKey) {
-        // Берём из Map<String, String> colors, которая лежит в ConfigReader.getConfig().getColors()
         return ConfigReader.getConfig()
                 .getColors()
                 .getOrDefault(colorKey, "");
     }
+
     private static String getTestStatus(ITestResult result) {
-        int status = result.getStatus();
-        return switch (status) {
-            case ITestResult.SUCCESS -> getColor("GREEN") + "PASS" + getColor("RESET");
-            case ITestResult.FAILURE -> getColor("RED") + "FAIL" + getColor("RESET");
-            default -> "UNDEFINED";
-        };
+        return TEST_STATUS_MAP.getOrDefault(result.getStatus(), "UNDEFINED");
     }
 
     private static String getTestRunTime(ITestResult result) {
