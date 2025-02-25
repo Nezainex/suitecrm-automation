@@ -7,22 +7,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import utils.ReportUtils;
 
-/**
- * Базовый абстрактный класс для тестов с общей логикой.
- */
 public abstract class BaseTest {
 
-    private static final Logger logger = LoggerFactory.getLogger(BaseTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
 
     @BeforeClass(alwaysRun = true)
     public void logSuiteStart(ITestContext context) {
-        logger.info(ReportUtils.getReportHeader(context));
+        LOG.info(ReportUtils.getReportHeader(context));
     }
 
     @AfterClass(alwaysRun = true)
     public void logSuiteEnd(ITestContext context) {
-        logger.info("Тестовый набор завершён: {}", context.getName());
+        LOG.info("Тестовый набор завершён: {}", context.getName());
     }
-
-    // Сюда потом можно запихнуть утилиты, общие и для UI, и для API
 }

@@ -9,7 +9,6 @@ import java.util.Map;
 @Getter
 public class ProjectConfig {
     private String browserChrome;
-    private String browserFirefox;
 
     private String baseUrl;
     private String loginEndpoint;

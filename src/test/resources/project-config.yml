@@ -1,6 +1,5 @@
 # Browser
 browserChrome: "chrome"
-browserFirefox: "firefox"
 
 # URLs
 baseUrl: "http://localhost:8080"

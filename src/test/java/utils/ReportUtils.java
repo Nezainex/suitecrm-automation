@@ -2,7 +2,7 @@ package utils;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import tests.BaseUITest;
+import tests.ui.BaseUITest;
 import utils.config.ConfigReader;
 
 import java.lang.reflect.Method;
@@ -56,7 +56,7 @@ public class ReportUtils {
         String header = "\tTest Report\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n";
         String currentDate = "\tDate: " + DateTimeUtils.getCurrentDateTime() + "\n";
         String projectName = "\tProject: Suitecrm-automation\n";
-        String baseURL = "\tBASE_URL: " + BaseUITest.getBaseUrl() + "\n";
+        String baseURL = "\tBASE_URL: " + ConfigReader.getConfig().getBaseUrl() + "\n";
 
         return H_LINE + header + currentDate + projectName + baseURL + H_LINE;
     }

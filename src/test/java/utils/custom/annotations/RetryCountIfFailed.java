@@ -1,4 +1,4 @@
-package utils.customAnnotations;
+package utils.custom.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

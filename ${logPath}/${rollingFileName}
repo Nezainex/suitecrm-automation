@@ -1,0 +1,22 @@
+25-02-2025 09:41:50 TestSuiteLogger: 18 [INFO] - Запущен тест: testEmptyFields
+25-02-2025 09:41:56 TestSuiteLogger: 22 [INFO] - Пройден тест: testEmptyFields за 6 секунд
+25-02-2025 09:41:56 TestSuiteLogger: 18 [INFO] - Запущен тест: testInvalidLogin
+25-02-2025 09:42:00 TestSuiteLogger: 22 [INFO] - Пройден тест: testInvalidLogin за 3 секунд
+25-02-2025 09:42:00 TestSuiteLogger: 18 [INFO] - Запущен тест: testValidLogin
+25-02-2025 09:42:04 TestSuiteLogger: 22 [INFO] - Пройден тест: testValidLogin за 3 секунд
+25-02-2025 09:42:05 TestSuiteLogger: 44 [INFO] - Завершение выполнения всех тестов в наборе: Default Suite
+25-02-2025 09:42:05 TestSuiteLogger: 58 [INFO] - Всего тестов: 3
+25-02-2025 09:42:05 TestSuiteLogger: 59 [INFO] - Пройдено тестов: 3
+25-02-2025 09:42:05 TestSuiteLogger: 60 [INFO] - Упало тестов: 0
+25-02-2025 09:42:05 TestSuiteLogger: 61 [INFO] - Пропущено тестов: 0
+25-02-2025 09:45:40 TestSuiteLogger: 18 [INFO] - Запущен тест: testEmptyFields
+25-02-2025 09:45:44 TestSuiteLogger: 22 [INFO] - Пройден тест: testEmptyFields за 4 секунд
+25-02-2025 09:45:45 TestSuiteLogger: 18 [INFO] - Запущен тест: testInvalidLogin
+25-02-2025 09:45:48 TestSuiteLogger: 22 [INFO] - Пройден тест: testInvalidLogin за 3 секунд
+25-02-2025 09:45:49 TestSuiteLogger: 18 [INFO] - Запущен тест: testValidLogin
+25-02-2025 09:45:53 TestSuiteLogger: 22 [INFO] - Пройден тест: testValidLogin за 4 секунд
+25-02-2025 09:45:54 TestSuiteLogger: 44 [INFO] - Завершение выполнения всех тестов в наборе: Default Suite
+25-02-2025 09:45:54 TestSuiteLogger: 58 [INFO] - Всего тестов: 3
+25-02-2025 09:45:54 TestSuiteLogger: 59 [INFO] - Пройдено тестов: 3
+25-02-2025 09:45:54 TestSuiteLogger: 60 [INFO] - Упало тестов: 0
+25-02-2025 09:45:54 TestSuiteLogger: 61 [INFO] - Пропущено тестов: 0

@@ -1,8 +1,12 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import lombok.Getter;
+import io.qameta.allure.Step;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.Objects;
@@ -10,8 +14,12 @@ import java.util.Objects;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
-@Getter
 public class HomePage extends BasePage {
+    private static final Logger LOG = LoggerFactory.getLogger(HomePage.class);
+
+    // Локатор для проверки домашней страницы (аналог "SUITECRM DASHBOARD")
+    private final SelenideElement homeMenuItem =
+            $x("//scrm-home-menu-item");
     /**
      * Дашлеты (Dashboard Blocks)
      */
@@ -209,284 +217,20 @@ public class HomePage extends BasePage {
     public void switchToHomePageIframe() {
         switchToIframeByWebElement("#_yuiResizeMonitor"); // Укажите актуальный id или name
     }
+
+
     /**
-     * Методы проверки дашлетов
+     * Переключение на iframe через WebElement.
+     * @param iframeXPath - XPath локатор для поиска iframe
      */
-    public boolean isMyCallsVisible() {
-        return myCallsBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-
-    public boolean isMyMeetingsVisible() {
-        return myMeetingsBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-
-    public boolean isMyTopOpenOppVisible() {
-        return myTopOpenOppBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-
-    public boolean isMyAccountsVisible() {
-        return myAccountsBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-
-    public boolean isMyLeadsVisible() {
-        return myLeadsBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-
-    public boolean isActivityStreamBlockVisible() {
-        return myActivityStreamBlock.shouldBe(Condition.visible, Duration.ofSeconds(10)).exists();
-    }
-    /**
-     * Hover-методы для каждого меню
-     */
-    public void hoverAccountsMenu() {
-        accountsMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverContactsMenu() {
-        contactsMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverOpportunitiesMenu() {
-        opportunitiesMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverLeadsMenu() {
-        leadsMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverQuotesMenu() {
-        quotesMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverCalendarMenu() {
-        calendarMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverDocumentsMenu() {
-        documentsMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverEmailsMenu() {
-        emailsMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-
-    public void hoverMoreMenu() {
-        moreMenu.shouldBe(Condition.visible, Duration.ofSeconds(10)).hover();
-    }
-    /**
-     * Click-методы для "Accounts"
-     */
-    public void clickCreateAccount() {
-        createAccountItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewAccounts() {
-        viewAccountsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportAccounts() {
-        importAccountsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Contacts"
-     */
-    public void clickCreateContact() {
-        createContactItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickCreateContactFromVCard() {
-        createContactFromVCardItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewContacts() {
-        viewContactsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportContacts() {
-        importContactsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Opportunities"
-     */
-    public void clickCreateOpportunity() {
-        createOpportunityItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewOpportunities() {
-        viewOpportunitiesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportOpportunities() {
-        importOpportunitiesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Leads"
-     */
-    public void clickCreateLead() {
-        createLeadItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickCreateLeadFromVCard() {
-        createLeadFromVCardItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewLeads() {
-        viewLeadsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportLeads() {
-        importLeadsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Quotes"
-     */
-    public void clickCreateQuote() {
-        createQuoteItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewQuotes() {
-        viewQuotesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportQuote() {
-        // Обратите внимание, "Import" может совпадать с "Import Line Items" по части текста,
-        // поэтому мы сделали отдельные локаторы
-        importQuoteItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickImportLineItems() {
-        importLineItemsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Calendar"
-     */
-    public void clickScheduleMeeting() {
-        scheduleMeetingItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickScheduleCall() {
-        scheduleCallItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickCreateTask() {
-        createTaskItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickToday() {
-        todayItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Documents"
-     */
-    public void clickCreateDocument() {
-        createDocumentItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewDocuments() {
-        viewDocumentsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "Emails"
-     */
-    public void clickComposeEmail() {
-        composeEmailItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickViewEmail() {
-        viewEmailItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-    /**
-     * Click-методы для "More"
-     */
-    public void clickMoreHome() {
-        moreHomeItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreCampaigns() {
-        moreCampaignsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreCalls() {
-        moreCallsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreMeetings() {
-        moreMeetingsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreTasks() {
-        moreTasksItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreNotes() {
-        moreNotesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreInvoices() {
-        moreInvoicesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreContracts() {
-        moreContractsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreCases() {
-        moreCasesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreTargets() {
-        moreTargetsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreTargetsLists() {
-        moreTargetsListsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreProjects() {
-        moreProjectsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreProjectsTemplates() {
-        moreProjectsTemplatesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreEvents() {
-        moreEventsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreLocations() {
-        moreLocationsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreProducts() {
-        moreProductsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreProductsCategories() {
-        moreProductsCategoriesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMorePdfTemplates() {
-        morePdfTemplatesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreReports() {
-        moreReportsItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreKnowledgeBase() {
-        moreKnowledgeBaseItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreKBCategories() {
-        moreKBCategoriesItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreEmailTemplate() {
-        moreEmailTemplateItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
-    }
-
-    public void clickMoreSurveys() {
-        moreSurveysItem.shouldBe(Condition.visible, Duration.ofSeconds(10)).click();
+    protected void switchToIframeByWebElement(String iframeXPath) {
+        String iframeId = "#_yuiResizeMonitor";
+        try {
+            Selenide.webdriver().driver().switchTo().frame(iframeId);
+            LOG.info("Успешно переключено на iframe с ID: " + iframeId);
+            //TODO: заменить System.out.println на логгер
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Не удалось найти iframe с ID: " + iframeId, e);
+        }
     }
 }

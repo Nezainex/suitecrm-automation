@@ -1,6 +1,6 @@
 package utils;
 
-import utils.customAnnotations.RetryCountIfFailed;
+import utils.custom.annotations.RetryCountIfFailed;
 import io.qameta.allure.Allure;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

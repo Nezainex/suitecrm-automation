@@ -1,9 +1,13 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import tests.ui.LoginTest;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
@@ -13,6 +17,8 @@ import java.util.Objects;
 
 @Getter
 public class LoginPage extends BasePage {
+
+    private static final Logger LOG = LoggerFactory.getLogger(LoginPage.class);
 
     // Локаторы на странице логина
     private final SelenideElement usernameField =
@@ -132,6 +138,7 @@ public class LoginPage extends BasePage {
         passwordField.shouldBe(Condition.visible, Duration.ofSeconds(10))
                 .setValue("");
     }
+
     /**
      * Выполняет логин с указанными логином и паролем.
      */

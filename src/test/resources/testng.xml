@@ -6,25 +6,12 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <!-- Custom TestListener -->
         <listener class-name="utils.listeners.TestListener"/>
-        <!-- Custom TestSuiteListener -->
-        <listener class-name="utils.listeners.TestSuiteListener"/>
         <!-- Custom AnnotationTransformer, чтобы не прописывать вручную RetryAnalizer к каждому тесту -->
         <listener class-name="utils.AnnotationTransformer" />
     </listeners>
 
-    <!-- Тесты для Chrome -->
-    <test name="UI_Tests_Chrome" preserve-order="false" parallel="classes" thread-count="3">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="tests.ui.LoginTest"/>
-            <class name="tests.ui.HomeTest"/>
-            <class name="tests.api.AuthTest"/>
-        </classes>
-    </test>
-
-    <!-- Тесты для Firefox -->
-    <test name="UI_Tests_Firefox" preserve-order="false" parallel="classes" thread-count="3">
-        <parameter name="browser" value="firefox"/>
+    <!-- UI Тесты -->
+    <test name="UI_Tests" preserve-order="false" parallel="classes" thread-count="3">
         <classes>
             <class name="tests.ui.LoginTest"/>
             <class name="tests.ui.HomeTest"/>

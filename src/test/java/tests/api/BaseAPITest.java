@@ -1,12 +1,6 @@
-package tests;
+package tests.api;
 
-import io.restassured.RestAssured;
-import io.restassured.specification.RequestSpecification;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.annotations.BeforeClass;
-import utils.config.ConfigReader;
-import utils.config.ProjectConfig;
+import tests.BaseTest;
 
 /**
  * Базовый класс для API-тестов.
@@ -15,15 +9,14 @@ import utils.config.ProjectConfig;
  */
 public abstract class BaseAPITest extends BaseTest {
 
-//    private static final Logger logger = LoggerFactory.getLogger(BaseAPITest.class);
+//    private static final Logger LOG = LoggerFactory.getLogger(BaseAPITest.class);
 //    protected static RequestSpecification baseRequest;
-//    private static final ProjectConfig CONFIG = ConfigReader.getConfig();
 //
 //    @BeforeClass
 //    public void setupAPI() {
 //        // Задаём базовую URI для RestAssured,
 //        // например, baseUrl, если оно у нас в YAML
-//        RestAssured.baseURI = CONFIG.getBaseUrl(); // или другой ключ, если у вас отдельный apiUrl
+//        RestAssured.baseURI = ConfigReader.getConfig().getBaseUrl(); // или другой ключ, если у вас отдельный apiUrl
 //
 //        // Задаём базовую спецификацию, которую можно переиспользовать в тестах
 //        baseRequest = RestAssured
@@ -42,8 +35,8 @@ public abstract class BaseAPITest extends BaseTest {
 //     */
 //    protected String getAuthToken() {
 //        // Допустим, в YAML или config есть логин/пароль
-//        String user = CONFIG.getValidUsername();
-//        String pass = CONFIG.getValidPassword();
+//        String user = ConfigReader.getConfig().getValidUsername();
+//        String pass = ConfigReader.getConfig().getValidPassword();
 //
 //        // Пример вызова эндпоинта /auth:
 //        String token = RestAssured

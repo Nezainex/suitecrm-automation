@@ -3,9 +3,10 @@ package pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import lombok.Getter;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -15,9 +16,9 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 import static java.util.concurrent.ThreadLocalRandom.current;
 import static com.codeborne.selenide.Selenide.switchTo;
 
-@Getter
 public abstract class BasePage {
-    //TODO: сделать все методы protected (но зачем)
+
+    private static final Logger LOG = LoggerFactory.getLogger(BasePage.class);
     /**
      * Получение заголовка страницы
      */
@@ -28,7 +29,7 @@ public abstract class BasePage {
     /**
      * Получение текущего URL
      */
-    public String getCurrentURL() {
+    protected String getCurrentURL() {
         return url(); // Получение текущего URL через Selenide
     }
 
@@ -49,7 +50,7 @@ public abstract class BasePage {
     /**
      * Проверка видимости элемента.
      */
-    public boolean isElementVisible(SelenideElement element) {
+    protected boolean isElementVisible(SelenideElement element) {
         return element.shouldBe(visible).exists();
     }
 
@@ -93,20 +94,6 @@ public abstract class BasePage {
             driver.switchTo().frame(idOrName); // Переключение на iframe
         } catch (NoSuchFrameException e) {
             throw new IllegalStateException("Iframe with id or name '" + idOrName + "' not found.", e);
-        }
-    }
-    /**
-     * Переключение на iframe через WebElement.
-     * @param iframeXPath - XPath локатор для поиска iframe
-     */
-    public void switchToIframeByWebElement(String iframeXPath) {
-        String iframeId = "#_yuiResizeMonitor";
-        try {
-            Selenide.webdriver().driver().switchTo().frame(iframeId);
-            System.out.println("Успешно переключено на iframe с ID: " + iframeId);
-            //TODO: заменить System.out.println на логгер
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Не удалось найти iframe с ID: " + iframeId, e);
         }
     }
 

@@ -1,35 +1,42 @@
 Configuration:
-  status: DEBUG
+  status: "INFO"
+
+  Properties:
+    logPath: "target/logs"
+    rollingFileName: "logfile.log"
 
   Appenders:
     Console:
-      name: "LogToConsole"
+      name: "Console"
       target: "SYSTEM_OUT"
       PatternLayout:
+        pattern: "%highlight{%d{dd-MM-yyyy HH:mm:ss} %c{1}: %L [%p] - %m%n}{
+                  FATAL=BG_Red,
+                  ERROR=red,
+                  WARN=normal yellow,
+                  INFO=normal blue,
+                  DEBUG=normal green,
+                  TRACE=MAGENTA}"
         disableAnsi: false
-        charset: "UTF-8"
-        pattern: "%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=bright black}"
 
-    File:
-      name: "LogToFile"
-      fileName: "C:/Users/Username/IdeaProjects/suitecrm-automation/logs/logger4j.log"
+    RollingFile:
+      name: "RollingFile"
+      fileName: "${logPath}/${rollingFileName}"
+      filePattern: "${logPath}/$${date:yyyy_MM}/log-%d{ddMMyyyy_HHmm}.log.zip"
       PatternLayout:
-        Pattern: "%d %p %c{1.} [%t] %m%n"
+        pattern: "%highlight{%d{dd-MM-yyyy HH:mm:ss} %c{1}: %L [%p] - %m%n}{
+                  FATAL=BG_Red,
+                  ERROR=red,
+                  WARN=normal yellow,
+                  INFO=normal blue,
+                  DEBUG=normal green,
+                  TRACE=MAGENTA}"
+      SizeBasedTriggeringPolicy:
+        size: "5 MB"
 
   Loggers:
-    Logger:
-      - name: "src.test.java"
-        level: "debug"
-        additivity: false
-        AppenderRef:
-          - ref: "LogToConsole"
-
-      - name: "io.qameta.allure.AllureLifecycle"
-        level: "off"
-        additivity: false
-
     Root:
-      level: "info"
+      level: "TRACE"
       AppenderRef:
-        - ref: "LogToConsole"
-        - ref: "LogToFile"
+        - ref: "Console"
+        - ref: "RollingFile"
