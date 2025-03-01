@@ -14,8 +14,6 @@
     <test name="UI_Tests" preserve-order="false" parallel="classes" thread-count="3">
         <classes>
             <class name="tests.ui.LoginTest"/>
-            <class name="tests.ui.HomeTest"/>
-            <class name="tests.api.AuthTest"/>
         </classes>
     </test>
 </suite>

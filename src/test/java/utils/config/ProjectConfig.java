@@ -1,5 +1,7 @@
 package utils.config;
 
+
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +13,8 @@ public class ProjectConfig {
     private String browserChrome;
 
     private String baseUrl;
+    private String loginPageUrl;
+
     private String loginEndpoint;
 
     private String validUsername;

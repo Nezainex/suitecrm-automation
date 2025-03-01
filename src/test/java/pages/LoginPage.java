@@ -3,11 +3,13 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import tests.ui.LoginTest;
+import utils.config.ConfigReader;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
@@ -66,9 +68,9 @@ public class LoginPage extends BasePage {
     /**
      * Метод для открытия страницы логина.
      */
+    @Step("Открываем страницу логина")
     public void openLoginPage() {
-        open("http://localhost:8080/#/Login");
-        // При желании можно тут же делать maximize()
+        open(ConfigReader.getConfig().getLoginPageUrl());
         webdriver().driver().getWebDriver().manage().window().maximize();
     }
 

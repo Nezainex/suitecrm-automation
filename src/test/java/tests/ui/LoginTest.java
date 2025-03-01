@@ -5,8 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.BasePage;
 import pages.LoginPage;
-import utils.TestUtils;
 import utils.config.ConfigReader;
 
 public class LoginTest extends BaseUITest {
@@ -58,8 +58,8 @@ public class LoginTest extends BaseUITest {
         loginPage.openLoginPage();
 
         // Генерируем случайные некорректные учетные данные для избежания ошибки "to many attempts, please try again later"
-        String invalidUser = TestUtils.getRandomName();
-        String invalidPass = TestUtils.getRandomName();
+        String invalidUser = BasePage.getRandomName();
+        String invalidPass = BasePage.getRandomName();
         LOG.info("Сгенерированы случайные некорректные учетные данные: {} / {}", invalidUser, invalidPass);
 
         inputInvalidCredentials(invalidUser, invalidPass);

@@ -3,6 +3,7 @@ browserChrome: "chrome"
 
 # URLs
 baseUrl: "http://localhost:8080"
+loginPageUrl: "http://localhost:8080/#/Login"
 
 # End point
 loginEndpoint: "/login"

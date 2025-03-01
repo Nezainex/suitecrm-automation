@@ -62,6 +62,7 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-java-commons:2.29.1'
     testImplementation 'io.qameta.allure:allure-descriptions-javadoc:2.29.1'
     testImplementation 'io.qameta.allure:allure-commandline:2.32.2'
+
     // AspectJ Weaver
     testImplementation 'org.aspectj:aspectjweaver:1.9.22.1'
 
